@@ -1,15 +1,20 @@
 #include <stdio.h>
 
-int testa_par(int x) {
-    return x % 2;
-}
+int testa_par(int);
 
 int main(void) {
+    int valor;
+    printf("Digite um valor: ");
+    scanf("%d", &valor);
 
-    int par = testa_par(10);
-    printf("10 é par? %d\n", !par);
-    int par2 = testa_par(3);
-    printf("3 é par? %d", !par2);
+    printf("%d par? %d", valor, testa_par(valor));
+    return 0;
+}
 
-  return 0;
+int testa_par(int x) {
+    if(x % 2 == 0) {
+        return 1;
+    } else {
+        return 0;
+    }
 }
